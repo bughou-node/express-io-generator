@@ -1,0 +1,18 @@
+#!/bin/bash
+
+(( $# == 1   )) || { echo "Usage: $(basename $0) NAME"; exit 1; }
+[[ ! -e "$1" ]] || { echo "$1 aready exists"; exit 1; }
+
+dir=~/.express-io
+
+if test ! -d "$dir"; then
+  echo cloing express-io repository.
+  git clone git@github.com:bughou/express-io.git "$dir"
+  cd "$dir"
+  git remote rename origin express-io
+fi
+
+echo generating ...
+cp -r "$dir" "$1"
+
+echo done
