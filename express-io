@@ -5,14 +5,21 @@
 
 dir=~/.express-io
 
-if test ! -d "$dir"; then
-  echo cloing express-io repository.
+if [[ ! -d "$dir" ]]; then
   git clone git@github.com:bughou/express-io.git "$dir"
-  cd "$dir"
-  git remote rename origin express-io
+  git -C "$dir" remote rename origin express-io
 fi
 
-echo generating ...
-cp -r "$dir" "$1"
-
-echo done
+case "$1" in
+  --update)
+    git -C "$dir" pull express-io master
+    ;;
+  -*)
+    echo unknow option "$1"
+    ;;
+  *)
+    echo generating ...
+    cp -r "$dir" "$1"
+    echo done
+    ;;
+esac
