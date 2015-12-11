@@ -1,15 +1,15 @@
 {
   "name": "express-io-generator",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "express and socket.io generator",
   "main": "app.js",
   "bin": {
     "express-io": "./express-io"
   },
-  "homepage": "https://github.com/bughou/express-io-generator",
+  "homepage": "https://github.com/bughou-node/express-io-generator",
   "repository": {
     "type": "git",
-    "url": "git@github.com/bughou/express-io-generator.git"
+    "url": "git@github.com/bughou-node/express-io-generator.git"
   },
   "author": "bughou@gmail.com",
   "license": "ISC"

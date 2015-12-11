@@ -14,3 +14,5 @@ express-io your-project-name
 ```
 express-io --update
 ```
+
+Homepage: https://github.com/bughou-node/express-io-generator
