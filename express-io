@@ -6,7 +6,7 @@
 dir=~/.express-io
 
 if [[ ! -d "$dir" ]]; then
-  git clone git@github.com:bughou/express-io.git "$dir"
+  git clone https://github.com/bughou/express-io.git "$dir" || exit
   git -C "$dir" remote rename origin express-io
 fi
 

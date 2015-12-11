@@ -1,6 +1,6 @@
 {
   "name": "express-io-generator",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "express and socket.io generator",
   "main": "app.js",
   "bin": {
